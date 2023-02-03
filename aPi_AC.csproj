@@ -1,0 +1,120 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="bin\**" />
+    <Content Remove="obj\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="obj\**" />
+    <None Remove="bin\**" />
+    <None Remove="obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Controllers\AcreditacionesController.cs" />
+    <Compile Include="Data\DataSql.cs" />
+    <Compile Include="Data\SqlConnec.cs" />
+    <Compile Include="Entidades\Entidades.cs" />    <!--<Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Debug\net6.0\aPi_AC.AssemblyInfo.cs" />
+    <Compile Include="obj\Debug\net6.0\aPi_AC.GlobalUsings.g.cs" />
+    <Compile Include="obj\Debug\net6.0\aPi_AC.MvcApplicationPartsAssemblyInfo.cs" />
+    <Compile Include="obj\Release\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="obj\Release\net6.0\aPi_AC.AssemblyInfo.cs" />
+    <Compile Include="obj\Release\net6.0\aPi_AC.GlobalUsings.g.cs" />
+    <Compile Include="obj\Release\net6.0\aPi_AC.MvcApplicationPartsAssemblyInfo.cs" />-->
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="aPi_AC.sln" />
+    <!--<None Include="bin\Debug\net6.0\aPi_AC.dll" />
+    <None Include="bin\Debug\net6.0\aPi_AC.exe" />
+    <None Include="bin\Debug\net6.0\aPi_AC.pdb" />
+    <None Include="bin\Debug\net6.0\Dapper.dll" />
+    <None Include="bin\Debug\net6.0\Microsoft.OpenApi.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win-x64\native\sni.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win-x86\native\sni.dll" />
+    <None Include="bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="bin\Debug\net6.0\System.Data.SqlClient.dll" />
+    <None Include="bin\Release\net6.0\aPi_AC.dll" />
+    <None Include="bin\Release\net6.0\aPi_AC.exe" />
+    <None Include="bin\Release\net6.0\aPi_AC.pdb" />
+    <None Include="bin\Release\net6.0\Dapper.dll" />
+    <None Include="bin\Release\net6.0\Microsoft.OpenApi.dll" />
+    <None Include="bin\Release\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Release\net6.0\runtimes\win-arm64\native\sni.dll" />
+    <None Include="bin\Release\net6.0\runtimes\win-x64\native\sni.dll" />
+    <None Include="bin\Release\net6.0\runtimes\win-x86\native\sni.dll" />
+    <None Include="bin\Release\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="bin\Release\net6.0\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="bin\Release\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="bin\Release\net6.0\System.Data.SqlClient.dll" />
+    <None Include="obj\aPi_AC.csproj.nuget.g.props" />
+    <None Include="obj\aPi_AC.csproj.nuget.g.targets" />
+    <None Include="obj\Debug\net6.0\aPi_AC.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\net6.0\aPi_AC.assets.cache" />
+    <None Include="obj\Debug\net6.0\aPi_AC.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\net6.0\aPi_AC.csproj.BuildWithSkipAnalyzers" />
+    <None Include="obj\Debug\net6.0\aPi_AC.csproj.CopyComplete" />
+    <None Include="obj\Debug\net6.0\aPi_AC.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\net6.0\aPi_AC.dll" />
+    <None Include="obj\Debug\net6.0\aPi_AC.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Debug\net6.0\aPi_AC.genruntimeconfig.cache" />
+    <None Include="obj\Debug\net6.0\aPi_AC.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\Debug\net6.0\aPi_AC.pdb" />
+    <None Include="obj\Debug\net6.0\apphost.exe" />
+    <None Include="obj\Debug\net6.0\refint\aPi_AC.dll" />
+    <None Include="obj\Debug\net6.0\ref\aPi_AC.dll" />
+    <None Include="obj\project.nuget.cache" />
+    <None Include="obj\Release\net6.0\aPi_AC.AssemblyInfoInputs.cache" />
+    <None Include="obj\Release\net6.0\aPi_AC.assets.cache" />
+    <None Include="obj\Release\net6.0\aPi_AC.csproj.AssemblyReference.cache" />
+    <None Include="obj\Release\net6.0\aPi_AC.csproj.CopyComplete" />
+    <None Include="obj\Release\net6.0\aPi_AC.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\net6.0\aPi_AC.dll" />
+    <None Include="obj\Release\net6.0\aPi_AC.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Include="obj\Release\net6.0\aPi_AC.genruntimeconfig.cache" />
+    <None Include="obj\Release\net6.0\aPi_AC.MvcApplicationPartsAssemblyInfo.cache" />
+    <None Include="obj\Release\net6.0\aPi_AC.pdb" />
+    <None Include="obj\Release\net6.0\apphost.exe" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\aPi_AC.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\aPi_AC.exe" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\aPi_AC.pdb" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\Dapper.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\runtimes\win-arm64\native\sni.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\runtimes\win-x64\native\sni.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\runtimes\win-x86\native\sni.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\System.Data.SqlClient.dll" />
+    <None Include="obj\Release\net6.0\PubTmp\Out\web.config" />
+    <None Include="obj\Release\net6.0\refint\aPi_AC.dll" />
+    <None Include="obj\Release\net6.0\ref\aPi_AC.dll" />
+    <None Include="obj\staticwebassets.pack.sentinel" />-->
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml.user" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1development_1json__JsonSchema="https://json.schemastore.org/appsettings.json" /></VisualStudio></ProjectExtensions>
+
+</Project>

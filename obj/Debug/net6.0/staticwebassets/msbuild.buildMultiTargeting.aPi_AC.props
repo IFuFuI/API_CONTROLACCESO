@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\aPi_AC.props" />
+</Project>
