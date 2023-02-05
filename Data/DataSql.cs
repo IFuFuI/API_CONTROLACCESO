@@ -81,6 +81,23 @@ namespace aPi_AC.Data
         }
 
 
+        public string Savelocal(string Json)
+        {
+            string json = "";
+
+            using (IDbConnection connection = new SqlConnection(SqlConnec.ObtenerConec()))
+            {
+                connection.Open();
+                var parametros = new DynamicParameters();
+               parametros.Add("JSON", Json);
+                var ListaRespuesta = connection.Query("dbo.SP_SAVE_LOG_LOCAL", param: parametros, commandType: CommandType.StoredProcedure);
+                var res = ListaRespuesta.ToList().FirstOrDefault();
+                json = res.Rjson;
+            }
+
+            return json;
+        }
+
 
         public void Dispose()
         {

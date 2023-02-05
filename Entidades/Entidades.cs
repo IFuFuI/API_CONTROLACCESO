@@ -7,10 +7,10 @@ namespace aPi_AC.Entidades
         public int VAL { get; set; }
         public string NOMBRE { get; set; }
         public string OBSERVACION { get; set; }
-
-
-
     }
+
+
+
 
     public class EFoliosAC
     {

@@ -74,6 +74,16 @@ namespace aPi_AC.Controllers
         }
 
 
+        [HttpPost ("SaveLocal")]
+        [AllowAnonymous]
+        public string Savelocal(string Json)
+        {
+            using(var BD = new DataSql())
+            {
+                return BD.Savelocal(Json);
+            }
+        }
+
 
 
     }

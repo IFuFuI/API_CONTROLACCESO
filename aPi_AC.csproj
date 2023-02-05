@@ -19,7 +19,8 @@
     <Compile Include="Controllers\AcreditacionesController.cs" />
     <Compile Include="Data\DataSql.cs" />
     <Compile Include="Data\SqlConnec.cs" />
-    <Compile Include="Entidades\Entidades.cs" />    <!--<Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
+    <Compile Include="Entidades\Entidades.cs" />
+<!--<Compile Include="obj\Debug\net6.0\.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" />
     <Compile Include="obj\Debug\net6.0\aPi_AC.AssemblyInfo.cs" />
     <Compile Include="obj\Debug\net6.0\aPi_AC.GlobalUsings.g.cs" />
     <Compile Include="obj\Debug\net6.0\aPi_AC.MvcApplicationPartsAssemblyInfo.cs" />
