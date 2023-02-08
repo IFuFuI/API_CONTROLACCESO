@@ -45,5 +45,17 @@ namespace aPi_AC.Entidades
         public int IDINVENTARIOACREDITACIONES { get; set; }
     }
 
+    public class UserDto
+    {
+        public string Username { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
 
+    public class User
+    {
+        public string Username { get; set; } = string.Empty;
+        public byte[] PasswordHash { get; set; }
+
+        public byte[] PassswordSalt { get; set; }
+    }
 }

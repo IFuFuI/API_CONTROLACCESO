@@ -1,5 +1,6 @@
 ﻿using aPi_AC.Data;
 using aPi_AC.Entidades;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,12 +8,12 @@ namespace aPi_AC.Controllers
 {
     [ApiController]
     [Route("api/AC")]
-    [Authorize]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 
     public class AcreditacionesController : Controller
     {
         [HttpGet("JsonRespuest")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IEnumerable<ERespuesta> JsonRespuest(string RFID, int ACCESO)
         {
             using (var BD = new DataSql())
@@ -24,7 +25,7 @@ namespace aPi_AC.Controllers
 
 
         [HttpGet("Respuesta")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public int Respuesta(string RFID, int IDEQUIP)
         {
             using (var BD = new DataSql())
@@ -34,7 +35,7 @@ namespace aPi_AC.Controllers
         }
 
         [HttpGet("FOLIOS_AC")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IEnumerable<EFoliosAC> FOLIOS_AC()
         {
             using (var BD = new DataSql())
@@ -44,7 +45,7 @@ namespace aPi_AC.Controllers
         }
 
         [HttpGet("ACCESOS")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IEnumerable<EAcceso> ACCESOS()
         {
             using(var BD = new DataSql())
@@ -54,7 +55,7 @@ namespace aPi_AC.Controllers
         }
 
         [HttpGet("PERMISOS")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IEnumerable<EPersmisos> PERMISOS()
         {
             using (var BD = new DataSql())
@@ -64,7 +65,7 @@ namespace aPi_AC.Controllers
         }
 
         [HttpGet("HARDCARDS")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public IEnumerable<EHardCard> HARDCARDS()
         {
             using (var BD = new DataSql())
@@ -75,7 +76,7 @@ namespace aPi_AC.Controllers
 
 
         [HttpPost ("SaveLocal")]
-        [AllowAnonymous]
+        //[AllowAnonymous]
         public string Savelocal(string Json)
         {
             using(var BD = new DataSql())
